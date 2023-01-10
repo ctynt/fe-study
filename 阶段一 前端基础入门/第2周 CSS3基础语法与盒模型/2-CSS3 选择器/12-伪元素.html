@@ -1,0 +1,63 @@
+<!--
+ * @Author: yxtong
+ * @Date: 2023-01-09 22:50:55
+ * @LastEditors: yxtong
+ * @LastEditTime: 2023-01-09 22:59:16
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素</title>
+    <style>
+        a {
+            color: orchid;
+        }
+
+        a::before {
+            content: "❤";
+        }
+
+        a::after {
+            content: "❤";
+        }
+
+        .box1 {
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        
+        .box1::selection {
+            background-color: lightblue;
+            color: dodgerblue;
+        }
+
+        .box1::first-letter {
+            font-size: 50px;
+        }
+
+        .box::first-line {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <a href="">我是超链接</a>
+    </p>
+    <p>
+        <a href="">我是超链接</a>
+    </p>
+    <p>
+        <a href="">我是超链接</a>
+    </p>
+
+
+</body>
+
+</html>
