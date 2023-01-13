@@ -1,0 +1,84 @@
+.juxing {
+    width: 300px;
+    height: 200px;
+    background-color: red;
+    position: relative;
+    margin: auto;
+}
+
+.star {
+    margin: 0 0;
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid yellow;
+    border-left: 100px solid transparent;
+    transform: rotate(35deg);
+    left: 20px;
+}
+
+.star:before {
+    border-bottom: 80px solid yellow;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+}
+
+.star:after {
+    content: '';
+    margin: 0;
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid yellow;
+    border-left: 100px solid transparent;
+    transform: rotate(-70deg);
+    left: -107px;
+    top: 5px;
+}
+
+.big {
+    transform: scale(.3) rotate(35deg);
+    top: 10px;
+    left: -50px;
+    z-index: 3;
+}
+
+.small1 {
+    position: absolute;
+    transform: scale(.1) rotate(-60deg);
+    top: -15px;
+    left: 5px;
+}
+
+.small2 {
+    position: absolute;
+    transform: scale(.1) rotate(-45deg);
+    top: 5px;
+    left: 30px;
+}
+
+.small3 {
+    position: absolute;
+    transform: scale(.1) rotate(35deg);
+    top: 33px;
+    left: 30px;
+}
+
+.small4 {
+    position: absolute;
+    transform: scale(.1) rotate(60deg);
+    top: 50px;
+    left: 5px;
+}

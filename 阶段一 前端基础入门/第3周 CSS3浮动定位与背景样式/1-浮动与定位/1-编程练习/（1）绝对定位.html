@@ -1,0 +1,45 @@
+<!--
+ * @Author: yxtong
+ * @Date: 2023-01-10 19:54:11
+ * @LastEditors: yxtong
+ * @LastEditTime: 2023-01-10 23:10:52
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>覆盖</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .blue {
+            width: 100px;
+            height: 100px;
+            background: blue;
+            position: absolute;
+            top:50px;
+            left: 100px;
+            z-index: 9;
+        }
+
+        .red {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left:50px;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blue"></div>
+    <div class="red"></div>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!--
+ * @Author: yxtong
+ * @Date: 2023-01-11 14:32:05
+ * @LastEditors: yxtong
+ * @LastEditTime: 2023-01-13 17:58:28
+-->
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>空间移动</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            perspective: 300px;
+            position: relative;
+        }
+
+        .box p {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+        }
+
+
+        .box p:nth-child(1) {
+            background-color: rgba(224, 48, 48, 0.486);
+            transform: rotateX(85deg);
+            z-index: 999;
+            
+        }
+
+        .box p:nth-child(2) {
+            background-color: rgba(21, 255, 17, 0.486);
+            transform: rotateX(-87deg) translateZ(46px);
+            z-index: 99;
+        }
+        .box p:nth-child(3) {
+            background-color: rgba(170, 141, 201, 0.486);
+            transform: rotateX(99deg) translateZ(-45px) translateZ(-40px);
+            z-index: 9;
+            
+        }
+
+       
+        
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+</body>
+
+</html>
