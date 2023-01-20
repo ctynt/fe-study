@@ -1,0 +1,64 @@
+<!--
+ * @Author: yxtong
+ * @Date: 2023-01-18 18:52:06
+ * @LastEditors: yxtong
+ * @LastEditTime: 2023-01-18 20:18:41
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+          * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 40px auto;
+            perspective: 500px;
+            position: relative;
+        }
+
+
+        .box img {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #333;
+            border-radius: 50%;
+        }
+
+
+        .box img.dog {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-origin: 0 100% ;
+            transition: transform 1s ease 0s;
+        }
+
+
+        .box:hover img.dog {
+            transform: rotateX(-180deg);
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img class="red" src="http://climg.mukewang.com/5f87bfa208ca046706500650.jpg" alt="">
+        <img class="dog" src="../images/dog.jpg" alt="">
+    </div>
+
+</body>
+
+</html>

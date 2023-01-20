@@ -1,0 +1,55 @@
+<!--
+ * @Author: yxtong
+ * @Date: 2023-01-18 18:29:02
+ * @LastEditors: yxtong
+ * @LastEditTime: 2023-01-18 18:50:46
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            overflow: hidden;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+
+        }
+
+        p {
+            position: absolute;
+            width: 300px;
+            height: 40px;
+            margin: 0;
+            color: white;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, .5);
+            top:300px;
+            transition: top 0.3s ease 0s;
+        }
+
+        
+        div:hover p {
+            top: 170px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <img src="../images/duck.png" alt="">
+        <p>这是一只小黄鸭</p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!--
+ * @Author: yxtong
+ * @Date: 2023-01-18 20:07:48
+ * @LastEditors: yxtong
+ * @LastEditTime: 2023-01-18 21:14:48
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        div {
+            font-family: Arial;
+            font-size: 72px;
+            font-weight: bold;
+            position: fixed;
+            right: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            margin: auto;
+            transform: rotate(90deg);
+            bottom: 20px;
+        }
+
+        div:hover {
+            animation: move 0.5s linear 0s infinite  alternate;
+            
+        }
+
+        @keyframes move {
+            from {
+                transform: rotate(90deg) translateX(5px);
+            }
+
+            to {
+                transform: rotate(90deg) translateX(-5px);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>&gt;</div>
+</body>
+
+</html>
