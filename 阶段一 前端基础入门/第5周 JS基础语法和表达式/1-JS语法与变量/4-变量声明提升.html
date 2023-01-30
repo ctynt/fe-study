@@ -1,0 +1,26 @@
+<!--
+ * @Author: yxtong
+ * @Date: 2023-01-31 00:22:42
+ * @LastEditors: yxtong
+ * @LastEditTime: 2023-01-31 00:28:37
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量显示声明提升</title>
+</head>
+<body>
+    <script>
+        // 此时a未定义，但是不会报错，只是输出 undefined ,JS 中undefined 也是一种数据类型
+        // 这就称为变量声明提升，就是后面有声明就行，可以提前使用，比如给第一个a赋值后，即可正确输出，尽管还没用var定义
+        a;
+        console.log(a);
+        var a = 123;
+        console.log(a);
+    </script>
+    
+</body>
+</html>
