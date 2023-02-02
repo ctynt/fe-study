@@ -1,0 +1,35 @@
+<!--
+ * @Author: yxtong
+ * @Date: 2023-01-31 21:35:46
+ * @LastEditors: yxtong
+ * @LastEditTime: 2023-02-01 20:48:02
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>累加分数和</title>
+</head>
+
+<body>
+    <script>
+        // 由用户输入数字n，计算3/2 + 4/3 + 5/4 + ... + (n+1)/n的结果
+
+        var n = Number(prompt('请输入数字'));
+
+        var sum = 0;
+
+        // 遍历分母，因为分母就是分子加1
+        for (var i = 2; i <= n; i++) {
+            sum += (i + 1) / i;
+        }
+
+        alert(sum.toFixed(2));
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var arr = [1,2,3,4,5];
+        
+        var twoSum = [];
+
+        for (var i = 0; i < 3 ; i++) {
+            var n = parseInt(Math.random() * arr.length);
+            twoSum.push(arr[n]);
+            arr.splice(n,1);
+        }
+
+        var twoSum = function (nums, target) {
+            //创建空对象obj
+            const obj = {}
+            // 拿到nums的长度
+            const len = nums.length
+            // 遍历数组
+            for (let i = 0; i < len; i++) {
+                // 可以把target-数组元素的值作为obj的键，不存在则存储，存在就返回键和i
+                if (obj[target - nums[i]] !== undefined) {
+                    return [obj[target - nums[i]], i]
+                }
+                //不存在则将nums[i]的值作为键，i为值
+                obj[nums[i]] = i
+            }
+        };
+
+        console.log(twoSum);
+
+        const start = document.querySelector("#start");
+        tabs.onclick=function() {
+
+        }
+
+    </script>
+    <div></div>
+    <button id="start">start</button>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆周率</title>
+</head>
+
+<body>
+    <script>
+        // 用莱布尼茨级数估算圆周率
+
+        var sum = 0;
+        // 累乘器，用来制作每一项，然后往累加器中累加
+        var item = 1;
+
+        var n = Number(prompt('请输入数字n'));
+
+        // 遍历
+        for (var i = 1; i <= n; i++) {
+            // 要先制作出这一项，使用累乘器,item就是小车厢
+            item *= i / (2 * i + 1)
+            // console.log(item) ;
+            // 把车厢往累加器中累加
+            sum += item;
+        }
+
+        alert((1 + sum) * 2);
+    </script>
+
+</body>
+
+</html>

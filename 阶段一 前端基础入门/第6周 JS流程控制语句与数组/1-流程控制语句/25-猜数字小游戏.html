@@ -1,0 +1,53 @@
+<!--
+ * @Author: yxtong
+ * @Date: 2023-01-31 21:37:22
+ * @LastEditors: yxtong
+ * @LastEditTime: 2023-02-01 21:49:08
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜数字</title>
+</head>
+
+<body>
+    <script>
+        // 随机一个数字，2~99之间
+        var answer = parseInt(Math.random() * 98) + 2;
+        // 此时范围的最小值和最大值，这个数值是用来提升用户的
+        var min = 1;
+        var max = 100;
+
+        do {
+            // 询问用户猜测的数字
+            var n = Number(prompt('请猜测数字' + min + '~' + max));
+            // 验证用户输入的数字是否在范围内
+            if (n <= min || n >= max) {
+                alert('您输入的数字不在范围内');
+                // 不在区间内，直接放弃这次循环，就开启下一次迭代
+                continue;
+            }
+
+            // 判断用户输入的数字和answer的关系
+            if(n > answer) {
+                alert('您输入的数字太大了');
+                // 因为用户输入的数字较大，所以可以此时的最大范围数字变为用户输入的值
+                max = n;
+            } else if (n < answer) {
+                alert('您输入的数字太小了');
+                // 因为用户输入的数字较小，所以可以此时的最小范围数字变为用户输入的值
+                min = n;
+            }
+        } while (n != answer);
+
+        // 出了循环，说明n和answer相等，只有相等了，才能出循环。
+        alert('恭喜猜对了！')
+    </script>
+
+</body>
+
+</html>

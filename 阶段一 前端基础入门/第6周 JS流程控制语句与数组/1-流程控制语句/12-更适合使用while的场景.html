@@ -1,0 +1,46 @@
+<!--
+ * @Author: yxtong
+ * @Date: 2023-01-31 12:48:34
+ * @LastEditors: yxtong
+ * @LastEditTime: 2023-01-31 21:23:00
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更适合while的场景</title>
+</head>
+
+<body>
+    <script>
+        // 寻找满足n的平方大于456789的最小整数
+        // 穷举法，从1开始实验
+        // var n = 1;
+        // while ( n * n <= 456789) {
+        //     n++;
+        // }
+        // console.log(n);
+
+        // 小兔子拔萝卜，第1天拔1个，第2天拔2个，第3天拔3个
+        // 问：第几天能拔光500个
+        // 天的序号就是这一天拔的萝卜数
+        var n = 1;
+        // 累加器
+        var sum = 0;
+
+        while(sum < 500) {
+            sum += n ;
+            n++;
+        }
+
+        // 一定注意这有一个“出一错误”
+        console.log(n-1);
+
+    </script>
+
+</body>
+
+</html>

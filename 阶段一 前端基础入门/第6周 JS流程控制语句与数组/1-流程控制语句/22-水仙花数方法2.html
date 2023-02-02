@@ -1,0 +1,45 @@
+<!--
+ * @Author: yxtong
+ * @Date: 2023-01-31 21:36:24
+ * @LastEditors: yxtong
+ * @LastEditTime: 2023-02-01 21:01:10
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水仙花数方法2</title>
+</head>
+<body>
+    <script>
+        // 用户输入三位数
+        var n = Number(prompt('请输入一个三位数'));
+
+        // 对用户输入的数值,进行合法性验证
+        if (!isNaN(n) && 100 <= n && n <= 999) {
+            // 用户输入数字合法时
+            // 字符串方法
+            // 把数字n变为字符串
+            var n_str = n.toString();
+            console.log('n_str', n_str)
+            // 个位
+            var a = Number(n_str.charAt(2));
+            // 十位
+            var b = Number(n_str.charAt(1)); 
+            // 百位
+            var c = Number(n_str.charAt(0)); 
+            
+            // 根据水仙花数的条件进行判断
+            if (Math.pow(a,3) + Math.pow(b,3) + Math.pow(c,3) == n) {
+                alert('这个数字是水仙花数');
+            } else {
+                alert('这个数字不是水仙花数');
+            }
+        }else {
+            alert('您输入的数字不合法');
+        }
+    </script>
+</body>
+</html>

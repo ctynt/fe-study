@@ -1,0 +1,36 @@
+<!--
+ * @Author: yxtong
+ * @Date: 2023-01-31 21:34:04
+ * @LastEditors: yxtong
+ * @LastEditTime: 2023-02-01 15:23:18
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算阶乘</title>
+</head>
+
+<body>
+    <script>
+        // 用户输入数字n
+        var n = Number(prompt('请输入数字'));
+
+        // 累乘器，注意累乘器从1开始，因为如果从0开始，0乘任何=0
+        var result = 1;
+
+        // 倒着遍历，计算阶乘
+
+        for ( var i = 0 ; i >= 1; i--) {
+            result *= i;
+        }
+
+        console.log(result);
+    </script>
+
+</body>
+
+</html>
